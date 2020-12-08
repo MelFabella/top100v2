@@ -34,7 +34,7 @@ class ArtistsController < ApplicationController
 
   def destroy 
     @artist.destroy
-    redireect_to artists_path
+    redirect_to artists_path
   end 
 
   private
