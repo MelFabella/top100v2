@@ -1,0 +1,12 @@
+<%= form_for @artist do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  
+  <%= f.label :rank %>
+  <%= f.text_field :rank, required: true %>
+
+  <%= f.label :numAlbs %>
+  <%= f.text_field :numAlbs, required: true %>
+
+  <%= f.submit %>
+<% end %>
