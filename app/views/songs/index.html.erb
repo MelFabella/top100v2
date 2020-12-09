@@ -1,2 +1,13 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h1><%= @billboard.title %> Songs</h1>
+<%= link_to 'Add Songs', new_artist_song_path(@billboard) %>
+<hr />
+<h2>Songs</h2>
+<ul>
+  <% @songs.each do |s| %>
+    <li>
+      <%= s.billboard.title %>
+      <br />
+      <%= link_to 'remove', artist_song_path(@billboard, s), method: :delete  %>
+    </li>
+  <% end %>
+</ul>

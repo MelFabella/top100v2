@@ -25,7 +25,7 @@ class BillboardsController < ApplicationController
 
   def update
     if @billboard.update(billboard_parmas)
-      reditect_to @billboard
+      redirect_to @billboard
     else
       render :edit
     end
@@ -42,6 +42,6 @@ class BillboardsController < ApplicationController
     end 
 
     def billboard_params
-      params.require(:billboard).permit(:title, :details,)
+      params.require(:billboard).permit(:title, :details)
     end 
 end

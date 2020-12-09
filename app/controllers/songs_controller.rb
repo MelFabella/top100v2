@@ -42,10 +42,12 @@ class SongsController < ApplicationController
 
   private
     def set_billboard
-      @billboard = Billboard.find(params[:billboard_id])
+      @billboard = Billboard.find(params[:artist_id])
     end
+
     def set_song
-      @enrollment =@billboard.songs.find(params[:id])
+      @song =@billboard.songs.find(params[:id])
+    end 
 
     def song_params 
       params.require(:song).permit(:title, :album, :genre, :length, :artist_id)
