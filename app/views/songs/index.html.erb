@@ -5,7 +5,9 @@
 <ul>
   <% @songs.each do |s| %>
     <li>
-      <%= s.billboard.title %>
+      <%= s.artist.name %>
+      <%= s.artist.rank %>
+      <%= s.artist.numAlbs %>
       <br />
       <%= link_to 'remove', billboard_song_path(@billboard, s), method: :delete  %>
     </li>

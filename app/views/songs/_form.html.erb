@@ -1,9 +1,15 @@
 <%= form_for [@billboard, @song] do |f| %>
   <%= f.label :artist %>
-  <%= f.select :artist_id, @artists.collect { |a| [a.name, a.rank, a.numAlbs, a.id]} %>
+  <%= f.select :artist_id, @artists.collect { |a| [a.name, a.id]} %>
   <br />
-  <%= f.label :song %>
-  <%= f.select :billboard_id, @billboards%>
+  <%= f.label :title %>
+  <%= f.text_field :title, required: true, autofocus: true %>
+  
+  <%= f.label :album %>
+  <%= f.text_field :album, required: true %>
+
+  <%= f.label :genre %>
+  <%= f.text_field :genre, required: true %>
 
   <%= f.submit %>
 <% end %>
