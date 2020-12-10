@@ -4,9 +4,9 @@
 <ul>
   <% @artists.each do |artist| %>
     <li>
-    <%= link_to artist.name, artist %>
-    <%= link_to artist.rank, artist %>
-    <%= link_to artist.numAlbs, artist %>
+      <%= link_to artist.name, artist %>
+      <%= link_to artist.rank, artist %>
+      <%= link_to artist.numAlbs, artist %>
     </li>
   <% end %>
 </ul>

@@ -10,7 +10,7 @@ class SongsController < ApplicationController
   end
 
   def new
-    @artists = Billboard.all - @billboard.artists
+    @artists = Artist.all - @billboard.artists 
     @song = @billboard.songs.new 
   end
 
@@ -24,11 +24,11 @@ class SongsController < ApplicationController
   end
 
   def edit
-    @artists = Billboard.all - @billboard.artists
+    @artists = Artist.all - @billboard.artists
   end
 
   def update
-    if @song.updat(song_params)
+    if @song.update(song_params)
       redirect_to billboard_songs_path(@billboard)
     else
       render :edit
@@ -42,7 +42,7 @@ class SongsController < ApplicationController
 
   private
     def set_billboard
-      @billboard = Billboard.find(params[:artist_id])
+      @billboard = Billboard.find(params[:billboard_id])
     end
 
     def set_song
