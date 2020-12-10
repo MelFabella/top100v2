@@ -1,6 +1,6 @@
 <h1><%= @billboard.title %></h1>
 <hr />
 <br />
-<%= link_to 'Songs', artist_songs_path(@billboard) %>
+<%= link_to 'Songs', billboard_songs_path(@billboard) %>
 <br />
 <%= link_to 'Delete Billboard', @billboard, method: :delete %>

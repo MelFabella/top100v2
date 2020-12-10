@@ -1,5 +1,5 @@
 <h1><%= @billboard.title %> Songs</h1>
-<%= link_to 'Add Songs', new_artist_song_path(@billboard) %>
+<%= link_to 'Add Songs', new_billboard_song_path(@billboard) %>
 <hr />
 <h2>Songs</h2>
 <ul>
@@ -7,7 +7,7 @@
     <li>
       <%= s.billboard.title %>
       <br />
-      <%= link_to 'remove', artist_song_path(@billboard, s), method: :delete  %>
+      <%= link_to 'remove', billboard_song_path(@billboard, s), method: :delete  %>
     </li>
   <% end %>
 </ul>

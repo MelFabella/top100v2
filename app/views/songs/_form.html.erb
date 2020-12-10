@@ -1,9 +1,9 @@
-<%= form_for [@artists, @songs] do |f| %>
-  <%= f.label :user %>
-  <%= f.select :user_id, @users.collect { |u| [u.full_name, u.id]} %>
+<%= form_for [@billboard, @song] do |f| %>
+  <%= f.label :artist %>
+  <%= f.select :artist_id, @artists.collect { |a| [a.name, a.rank, a.numAlbs, a.id]} %>
   <br />
-  <%= f.label :role %>
-  <%= f.select :role, ['ta', 'teacher', 'student'] %>
+  <%= f.label :song %>
+  <%= f.select :billboard_id, @billboards%>
 
   <%= f.submit %>
 <% end %>
